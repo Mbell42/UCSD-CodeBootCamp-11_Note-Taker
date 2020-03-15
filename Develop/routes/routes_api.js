@@ -24,13 +24,13 @@ module.exports = (app) => {
         // DELETE  from the db
         app.delete("/api/notes/:id", (request, result) => {
             let noteId = request.params.id;
+            console.log("noteId: ", noteId);
             
-            
-            fs.readFile("./db/db.json", "utf-8", (err, respone) => {
+            fs.readFile("./db/db.json", "utf-8", (err, response) => {
                 if (err) throw (err);
                 const allNotes = JSON.parse(response);
                 const newNotes = allNotes.filter((note) => note.id != noteId);
-                fs.writeFile("/db/db.json", JSON.stringify(newNotes, null, 2), (err) => {
+                fs.writeFile("./db/db.json", JSON.stringify(newNotes, null, 2), (err) => {
                     if (err) throw (err);
                     result.json(true);
                     console.log("Note has been deleted successfully");

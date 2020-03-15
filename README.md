@@ -36,3 +36,5 @@ Progress:
 2020.03.14_2320 - For 'routes_api.js', I corrected the path for the dependency 'data'.
 
 2020.03.14_2332 - For 'routes_api.js', I completed 'READ' GET request, and then completed 'DELETE' GET request.
+
+2020.03.14_2335 - For 'routes_api.js', I corrected the path for 'fs.writeFile'.  I then corrected a couple spelling errors, and added console logs for user visibility.
