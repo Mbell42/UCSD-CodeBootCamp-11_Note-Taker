@@ -3,9 +3,9 @@ const path = require("path");
 
 // Routing
 module.exports = (app) => {
-    // HTML Get routes
+    // HTML GET routes
     app.get("/notes/", (request,result) => {
-        result.sendFile(path.join(_dirname, "../public/index.html"));
+        result.sendFile(path.join(__dirname, "../public/notes.html"));
     });
 
     app.get("*", (request, result) => {

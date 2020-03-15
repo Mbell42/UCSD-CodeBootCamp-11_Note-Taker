@@ -25,4 +25,6 @@ Progress:
 
 2020.03.14_2233 - For 'server.js', added dependencies, set up express, opened the initial port, and set up paths to route files in develop/routes.
 
-2020.03.14_~~ - For 'server.js', I configured express to parse data, and added a listener to start the server when the port is accessed.
+2020.03.14_1045 - For 'server.js', I configured express to parse data, and added a listener to start the server when the port is accessed.  For 'routes_html.js', I added dependencies, and set up routing with GET routes.
+
+2020.03.14_1047 - For 'routes_html.js', I corrected both GET routes, correcting '_dirname' to '__dirname', and correcting file name of the GET route pointing to 'notes.html'.
