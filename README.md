@@ -30,3 +30,5 @@ Progress:
 2020.03.14_1048 - For 'routes_html.js', I corrected both GET routes, correcting '_dirname' to '__dirname', and correcting file name of the GET route pointing to 'notes.html'.
 
 2020.03.14_2258 - For 'routes_api.js', I added dpendencies, and set up mostly empty function for routing. Next I will  research 'try' and 'catch'.
+
+2020.03.14_2319 - For 'routes_api.js', I set up 'try' and 'catch' functions.  I then ran npm install, creating package-lock.json.
