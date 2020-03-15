@@ -1,6 +1,6 @@
 // Grabbing Dependencies
 const fs = require("fs");
-const data = require("../db/db.jsno");
+const data = require("../db/db.json");
 
 // Routing
 module.exports = (app) => {
@@ -10,10 +10,11 @@ module.exports = (app) => {
         fs.readFile("./db/db.json", "utf-8", (err, notes) => {
             if (err) throw (err);
             let notesParsed;
-            // notes must be an array; if it is not an array, and can not be converted into one, throw an error.
+            // notes must be an array; if it is not an array, and
+            //can not be converted into one, throw an error
 
             try {
-
+                notesParsed
             } catch (err) {
 
             }

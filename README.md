@@ -32,3 +32,5 @@ Progress:
 2020.03.14_2258 - For 'routes_api.js', I added dpendencies, and set up mostly empty function for routing. Next I will  research 'try' and 'catch'.
 
 2020.03.14_2319 - For 'routes_api.js', I set up 'try' and 'catch' functions.  I then ran npm install, creating package-lock.json.
+
+2020.03.14_2320 - For 'routes_api.js', I corrected the path for the dependency 'data'.
