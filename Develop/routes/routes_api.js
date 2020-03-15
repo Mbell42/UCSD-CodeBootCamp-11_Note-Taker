@@ -40,5 +40,20 @@ module.exports = (app) => {
         });
 
         // Post to the db
-        app.post();
+        app.post("./api/notes", (request, result) => {
+            console.log(data, "Adding New Note", request.body);
+            // Read from the JSON file
+            fs.readFile("./db/db.json", "utf-8", (err, response) => {
+                // Convert to JSON
+                let allNotes = JSON.parse(response);
+                console.log("New Note: ", request.body, allNotes);
+                allNotes.push(request.body);
+                // Update with new note
+                fs.writeFile("./db/db.json", JSON.stringify(allNotes), (err) => {
+                    if (err) throw (err);
+                    result.json(allNotes);
+                    console.log("New Note has been added successfully: ", allNotes);
+                });
+            });
+        });
 };
