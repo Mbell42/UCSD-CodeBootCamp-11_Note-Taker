@@ -18,4 +18,5 @@ require("./routes/routes_html")(app);
 
 
 // Listener to start server when port is accessed
+app.listen(PORT, () => console.log('App is now listening on PORT: ' + PORT));
 
