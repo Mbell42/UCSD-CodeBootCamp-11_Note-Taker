@@ -27,4 +27,6 @@ Progress:
 
 2020.03.14_1045 - For 'server.js', I configured express to parse data, and added a listener to start the server when the port is accessed.  For 'routes_html.js', I added dependencies, and set up routing with GET routes.
 
-2020.03.14_1047 - For 'routes_html.js', I corrected both GET routes, correcting '_dirname' to '__dirname', and correcting file name of the GET route pointing to 'notes.html'.
+2020.03.14_1048 - For 'routes_html.js', I corrected both GET routes, correcting '_dirname' to '__dirname', and correcting file name of the GET route pointing to 'notes.html'.
+
+2020.03.14_2258 - For 'routes_api.js', I added dpendencies, and set up mostly empty function for routing. Next I will  research 'try' and 'catch'.
