@@ -15,9 +15,10 @@ Resources used:
 - GitHub
 - node.js
 - node.js modules:
+    - express
 
 Progress:
 ------------
 2020.03.14_2022 - Initial commit. Set up folder structure and imported initial starting point from 'https://ucsd.bootcampcontent.com/UCSD-Coding-Bootcamp/UCSD-SD-FSF-PT-12-2019-U-C/tree/master/11-express/02-Homework'.
 
-
+2020.03.14_2025 - Added empty'server', 'routes_api', and 'routes_html' .js files. 
