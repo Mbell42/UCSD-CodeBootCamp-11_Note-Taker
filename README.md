@@ -24,3 +24,5 @@ Progress:
 2020.03.14_2025 - Added empty'server', 'routes_api', and 'routes_html' .js files. 
 
 2020.03.14_2233 - For 'server.js', added dependencies, set up express, opened the initial port, and set up paths to route files in develop/routes.
+
+2020.03.14_~~ - For 'server.js', I configured express to parse data, and added a listener to start the server when the port is accessed.
