@@ -34,3 +34,5 @@ Progress:
 2020.03.14_2319 - For 'routes_api.js', I set up 'try' and 'catch' functions.  I then ran npm install, creating package-lock.json.
 
 2020.03.14_2320 - For 'routes_api.js', I corrected the path for the dependency 'data'.
+
+2020.03.14_2332 - For 'routes_api.js', I completed 'READ' GET request, and then completed 'DELETE' GET request.
