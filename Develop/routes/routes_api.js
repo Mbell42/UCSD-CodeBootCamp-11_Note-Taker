@@ -17,7 +17,7 @@ module.exports = (app) => {
             } catch (err) {
                 notesParsed = [];
             }
-            return result.join(notesParsed)
+            result.json(notesParsed);
         });
     });
 
@@ -29,15 +29,16 @@ module.exports = (app) => {
             fs.readFile("./db/db.json", "utf-8", (err, response) => {
                 if (err) throw (err);
                 const allNotes = JSON.parse(response);
-                const newNotes = allNotes.filter((note) => note.id != noteId);
-                fs.writeFile("./db/db.json", JSON.stringify(newNotes, null, 2), (err) => {
-                    if (err) throw (err);
-                    result.json(true);
-                    console.log("Note has been deleted successfully");
-                    
-                });
+                const newNotes = allNotes.filter(note => note.id != noteId);
+                fs.writeFile("./db/db.json", JSON.stringify(newNotes, null, 2),
+                    err => {
+                        if (err) throw err;
+                        result.json(true);
+                        console.log('Notes have been deleted!');
+                    }
+                );
+              });
             });
-        });
 
         // Post to the db
         app.post("./api/notes", (request, result) => {
@@ -46,8 +47,14 @@ module.exports = (app) => {
             fs.readFile("./db/db.json", "utf-8", (err, response) => {
                 // Convert to JSON
                 let allNotes = JSON.parse(response);
-                console.log("New Note: ", request.body, allNotes);
-                allNotes.push(request.body);
+
+                var latestNote = allNotes[allNotes.length - 1].id;
+                latestNote = latestNote + 1;
+                console.log(latestNote);
+
+                const newNote = { ...req.body, id: latestNote };
+                console.log("New Note: ", newNote);
+                allNotes.push(newNote);
                 // Update with new note
                 fs.writeFile("./db/db.json", JSON.stringify(allNotes), (err) => {
                     if (err) throw (err);
