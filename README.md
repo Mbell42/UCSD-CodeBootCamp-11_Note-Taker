@@ -1,4 +1,4 @@
-# 11_Note-Taker
+# UCSD-CodeBootCamp-11_Note-Taker
 
 This is my eleventh homework project.
 
